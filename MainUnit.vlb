@@ -1,0 +1,23 @@
+﻿[]
+Coordinates=208,1,108,33
+ExplicitSubNodes=Position
+Visible=True
+
+[Module Settings]
+ModelLayerNames=1;2;3
+ActiveLayerNames=
+EditingLayerName=
+
+[dll_paths_list_box]
+Coordinates=105,1,84,105
+LayerNames=
+
+[add_dll_paths_button]
+Coordinates=227,1,83,51
+
+[remove_dll_paths_button]
+Coordinates=46,70,101,51
+
+[dlls_file_open_dialog]
+Coordinates=227,1,68,33
+
