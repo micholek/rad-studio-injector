@@ -36,7 +36,7 @@ class TProcessInfo : public TObject {
 class TMainForm : public TForm {
     // clang-format off
   __published:
-	  TListBox *dll_paths_list_box;
+    TListBox *dll_paths_list_box;
     // clang-format on
     TButton *remove_dll_paths_button;
     TFileOpenDialog *dlls_file_open_dialog;
