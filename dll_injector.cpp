@@ -5,7 +5,7 @@
 #include <windows.h>
 
 #include "MainUnit.h"
-#include "injector.h"
+#include <injector/injector.h>
 
 #include <System.SysUtils.hpp>
 #include <Vcl.Styles.hpp>

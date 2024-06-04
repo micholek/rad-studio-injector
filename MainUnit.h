@@ -22,7 +22,7 @@
 
 #include <vector>
 
-#include "injector.h"
+#include <injector/injector.h>
 
 class TProcessInfo : public TObject {
   public:
