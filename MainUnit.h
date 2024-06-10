@@ -24,10 +24,10 @@
 
 #include <injector/injector.h>
 
-class TProcessInfo : public TObject {
+class TProcess : public TObject {
   public:
-    explicit __fastcall TProcessInfo(const dll_injector::ProcessInfo &pi)
-        : pid {pi.pid}, name {pi.name} {}
+    explicit __fastcall TProcess(const dll_injector::Process &p)
+        : pid {p.pid}, name {p.name} {}
 
     uint32_t pid;
     std::wstring name;
@@ -53,16 +53,17 @@ class TMainForm : public TForm {
     void __fastcall update_process_list_event(TObject *Sender);
 
   public:
-    __fastcall TMainForm(TComponent *Owner);
+    __fastcall TMainForm(TComponent *owner);
     __fastcall ~TMainForm();
-
-    void __fastcall set_injector(dll_injector::Injector *injector);
 
   private:
     void __fastcall update_process_name_combo_box_();
 
-    dll_injector::Injector *injector_;
-    std::vector<TProcessInfo *> pi_objects_;
+    void __fastcall create_tprocess_objects_();
+    void __fastcall delete_tprocess_objects_();
+
+    dll_injector::Injector injector_;
+    std::vector<TProcess *> tp_objects_;
 };
 
 extern PACKAGE TMainForm *MainForm;
